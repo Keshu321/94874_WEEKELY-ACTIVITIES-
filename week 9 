@@ -1,0 +1,67 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyNlcwXvNT3QJnAtseXSY5pQ",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/Keshu321/94874_WEEKELY-ACTIVITIES-/blob/main/week%209%20\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 2,
+      "metadata": {
+        "id": "1vbCDjE5yQiG"
+      },
+      "outputs": [],
+      "source": [
+        "import tensorflow as tf\n",
+        "from tensorflow import keras\n",
+        "from tensorflow.keras.models import Sequential\n",
+        "from tensorflow.keras.layers import Dense\n",
+        "import numpy as np\n",
+        "import logging \n",
+        "tf.get_logger().setLevel(logging.ERROR)\n",
+        "\n",
+        "EPOCHS = 500\n",
+        "BATCH_SIZE = 16\n",
+        "\n",
+        "boston_housing= keras.datasets.boston_housing\n",
+        "(raw_x_train, y_train), (raw_x_test,\n",
+        "     y_test) = boston_housing.load_data()\n",
+        "x_mean = np.mean(raw_x_train, axis=0)\n",
+        "x_stddev = np.std(raw_x_train, axis =0)\n",
+        "x_train =(raw_x_test - x_mean) / x_stddev\n",
+        "x_test = (raw_x_test - x_mean) / x_stddev"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [],
+      "metadata": {
+        "id": "_CukTSYX14TO"
+      },
+      "execution_count": null,
+      "outputs": []
+    }
+  ]
+}
